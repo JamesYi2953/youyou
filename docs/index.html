@@ -14,11 +14,18 @@
   h1, h2, h3, h4 {
     font-family: 'Source Sans Pro', sans-serif;
   }
-    @media print {
-        .page-break {
-            page-break-before: always;
-        }
+    .header {
+        top: 0;
+        left: 0;
+        height: 50px;
+        z-index: 100; /* 将 z-index 设置为较高的值 */
+        max-width: 100%;
+        max-height: 100%;
+        background-image: url('pic/love.jpeg'); /* 添加背景图片 */
+        background-size: contain;
+        background-repeat: repeat-x; /* 水平重复背景图片 */
     }
+
     .left-placeholder {
         background-color: pink;
         height: 100vh;
@@ -46,6 +53,7 @@
 
 
 <body>
+    <div class="header"></div>
     <div class="left-placeholder"></div>
     <div class="right-placeholder"></div>
 
